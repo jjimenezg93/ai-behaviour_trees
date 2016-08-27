@@ -30,6 +30,15 @@
     <ClCompile Include="seek_steering.cpp" />
     <ClCompile Include="align_steering.cpp" />
     <ClCompile Include="arrive_steering.cpp" />
+    <ClCompile Include="BT\behaviour.cpp">
+      <Filter>BT</Filter>
+    </ClCompile>
+    <ClCompile Include="BT\group.cpp">
+      <Filter>BT</Filter>
+    </ClCompile>
+    <ClCompile Include="BT\sequence.cpp">
+      <Filter>BT</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="character.h" />
@@ -58,6 +67,15 @@
     <ClInclude Include="seek_steering.h" />
     <ClInclude Include="align_steering.h" />
     <ClInclude Include="arrive_steering.h" />
+    <ClInclude Include="BT\behaviour.h">
+      <Filter>BT</Filter>
+    </ClInclude>
+    <ClInclude Include="BT\group.h">
+      <Filter>BT</Filter>
+    </ClInclude>
+    <ClInclude Include="BT\sequence.h">
+      <Filter>BT</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="host">
@@ -68,6 +86,9 @@
     </Filter>
     <Filter Include="pathfinder">
       <UniqueIdentifier>{47ed7435-33e6-42c5-a299-696662ae0eb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BT">
+      <UniqueIdentifier>{5c65f6ac-4e0f-4760-af81-2da911211e12}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
