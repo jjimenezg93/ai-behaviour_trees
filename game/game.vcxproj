@@ -126,8 +126,10 @@
     <ClCompile Include="aligntomovement_steering.cpp" />
     <ClCompile Include="align_steering.cpp" />
     <ClCompile Include="arrive_steering.cpp" />
+    <ClCompile Include="BT\action_changeimage.cpp" />
     <ClCompile Include="BT\behaviour.cpp" />
     <ClCompile Include="BT\group.cpp" />
+    <ClCompile Include="BT\selector.cpp" />
     <ClCompile Include="BT\sequence.cpp" />
     <ClCompile Include="character.cpp" />
     <ClCompile Include="gameConfig.cpp" />
@@ -152,8 +154,10 @@
     <ClInclude Include="aligntomovement_steering.h" />
     <ClInclude Include="align_steering.h" />
     <ClInclude Include="arrive_steering.h" />
+    <ClInclude Include="BT\action_changeimage.h" />
     <ClInclude Include="BT\behaviour.h" />
     <ClInclude Include="BT\group.h" />
+    <ClInclude Include="BT\selector.h" />
     <ClInclude Include="BT\sequence.h" />
     <ClInclude Include="character.h" />
     <ClInclude Include="gameConfig.h" />

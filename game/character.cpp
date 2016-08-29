@@ -12,6 +12,11 @@
 #include "obstacleavoidance_steering.h"
 #include "obstaclepath_steering.h"
 
+//BT
+#include "BT/selector.h"
+#include "BT/sequence.h"
+#include "BT/action_changeimage.h"
+
 #define INPUT_MIN_TIME 0.2f
 
 //actions and conditions are not freed inside SM's, states or transitions because

@@ -39,6 +39,12 @@
     <ClCompile Include="BT\sequence.cpp">
       <Filter>BT</Filter>
     </ClCompile>
+    <ClCompile Include="BT\selector.cpp">
+      <Filter>BT</Filter>
+    </ClCompile>
+    <ClCompile Include="BT\action_changeimage.cpp">
+      <Filter>BT\actions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="character.h" />
@@ -76,6 +82,12 @@
     <ClInclude Include="BT\sequence.h">
       <Filter>BT</Filter>
     </ClInclude>
+    <ClInclude Include="BT\selector.h">
+      <Filter>BT</Filter>
+    </ClInclude>
+    <ClInclude Include="BT\action_changeimage.h">
+      <Filter>BT\actions</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="host">
@@ -89,6 +101,12 @@
     </Filter>
     <Filter Include="BT">
       <UniqueIdentifier>{5c65f6ac-4e0f-4760-af81-2da911211e12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BT\actions">
+      <UniqueIdentifier>{d77f730c-e899-4fe6-bd8f-0e43967b29ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BT\conditions">
+      <UniqueIdentifier>{f75ddd15-636d-4ec8-9d95-e8dd368b2432}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -12,8 +12,8 @@ enum ECharacterStates {
 	ECS_WINDUP
 };
 
+class CBehaviour;
 class Steering;
-class StateMachine;
 
 struct Accelerations {
 	Accelerations(): linearAcc(0, 0), angularAcc(0) {}
@@ -67,6 +67,9 @@ private:
 	bool mCanMove;
 
 	float mLastInputTime;
+
+	//Behaviour Tree
+	CBehaviour * m_rootBehaviour;
 
 	// Lua configuration
 public:

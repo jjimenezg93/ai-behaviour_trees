@@ -1,10 +1,9 @@
 #include "stdafx.h"
 
 #include "behaviour.h"
+#include "character.h"
 
-CBehaviour::CBehaviour(): m_status(EBS_INVALID) {
-
-}
+CBehaviour::CBehaviour(Character * owner): m_owner(owner), m_status(EBS_INVALID) {}
 
 EBehaviourStatus CBehaviour::Tick() {
 	if (m_status == EBS_INVALID) {
@@ -18,6 +17,10 @@ EBehaviourStatus CBehaviour::Tick() {
 	}
 
 	return m_status;
+}
+
+Character * CBehaviour::GetOwner() const {
+	return m_owner;
 }
 
 EBehaviourStatus CBehaviour::Update() {
