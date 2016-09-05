@@ -13,6 +13,7 @@ enum ECharacterStates {
 };
 
 class CBehaviour;
+class CGroup;
 class Steering;
 
 struct Accelerations {
@@ -69,7 +70,7 @@ private:
 	float mLastInputTime;
 
 	//Behaviour Tree
-	CBehaviour * m_rootBehaviour;
+	CGroup * m_rootBehaviour;
 
 	// Lua configuration
 public:

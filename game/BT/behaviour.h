@@ -15,6 +15,9 @@ public:
 	CBehaviour(Character * owner);
 
 	EBehaviourStatus Tick();
+
+	//resets timers or similar variables, each time the behaviour is processed
+	virtual void Reset();
 protected:
 	Character * GetOwner() const;
 

@@ -6,11 +6,13 @@
 
 class CSelector: public CGroup {
 public:
+	CSelector(Character * owner);
 
+	virtual void Reset() override;
 protected:
-	virtual EBehaviourStatus Update();
-	virtual void OnEnter();
-	virtual void OnExit();
+	virtual EBehaviourStatus Update() override;
+	virtual void OnEnter() override;
+	virtual void OnExit() override;
 private:
 	std::vector<CBehaviour *>::const_iterator m_currentChild;
 };

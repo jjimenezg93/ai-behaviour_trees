@@ -45,6 +45,9 @@
     <ClCompile Include="BT\action_changeimage.cpp">
       <Filter>BT\actions</Filter>
     </ClCompile>
+    <ClCompile Include="BT\condition_seeingplayer.cpp">
+      <Filter>BT\conditions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="character.h" />
@@ -87,6 +90,9 @@
     </ClInclude>
     <ClInclude Include="BT\action_changeimage.h">
       <Filter>BT\actions</Filter>
+    </ClInclude>
+    <ClInclude Include="BT\condition_seeingplayer.h">
+      <Filter>BT\conditions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -6,11 +6,13 @@
 
 class CSequence: public CGroup {
 public:
+	CSequence(Character * owner);
 
+	virtual void Reset();
 protected:
-	virtual EBehaviourStatus Update();
-	virtual void OnEnter();
-	virtual void OnExit();
+	virtual EBehaviourStatus Update() override;
+	virtual void OnEnter() override;
+	virtual void OnExit() override;
 private:
 	std::vector<CBehaviour *>::const_iterator m_currentChild;
 };

@@ -3,6 +3,8 @@
 #include <vector>
 #include "selector.h"
 
+CSelector::CSelector(Character * owner): CGroup(owner) {}
+
 EBehaviourStatus CSelector::Update() {
 	EBehaviourStatus status;
 	while (1) {
@@ -25,5 +27,11 @@ void CSelector::OnEnter() {
 }
 
 void CSelector::OnExit() {
+	CGroup::OnExit();
+	m_currentChild = GetChildren().begin();
+}
 
+void CSelector::Reset() {
+	CBehaviour::Reset();
+	m_currentChild = GetChildren().begin();
 }

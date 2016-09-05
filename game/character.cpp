@@ -16,6 +16,7 @@
 #include "BT/selector.h"
 #include "BT/sequence.h"
 #include "BT/action_changeimage.h"
+#include "BT/condition_seeingplayer.h"
 
 #define INPUT_MIN_TIME 0.2f
 
@@ -46,6 +47,18 @@ void Character::OnStart() {
 	mLastInputTime = 0.f;
 	mCanMove = false;
 	mIsTargetActive = false;
+
+	//BT
+	m_rootBehaviour = new CSelector(this);
+	
+	CSequence * seqFollowPlayer = new CSequence(this);
+
+	CConditionSeeingPlayer * condSeeingPlayer = new CConditionSeeingPlayer(this);
+	CActionChangeImage * actChgImgFollowing = new CActionChangeImage(this, 2);
+	seqFollowPlayer->AddChild(condSeeingPlayer);
+	seqFollowPlayer->AddChild(actChgImgFollowing);
+
+	m_rootBehaviour->AddChild(seqFollowPlayer);
 }
 
 void Character::FillPath() {
@@ -66,6 +79,8 @@ void Character::OnStop() {
 
 void Character::OnUpdate(float step) {
 	mLastInputTime += step;
+
+	m_rootBehaviour->Tick();
 
 	Accelerations acc;
 	for (std::vector<Steering *>::iterator itr = mSteerings.begin(); itr != mSteerings.end();
