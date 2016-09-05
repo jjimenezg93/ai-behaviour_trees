@@ -12,7 +12,7 @@ enum ECharacterStates {
 	ECS_WINDUP
 };
 
-class CBehaviour;
+class CSelector;
 class CGroup;
 class Steering;
 

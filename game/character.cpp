@@ -55,10 +55,12 @@ void Character::OnStart() {
 
 	CConditionSeeingPlayer * condSeeingPlayer = new CConditionSeeingPlayer(this);
 	CActionChangeImage * actChgImgFollowing = new CActionChangeImage(this, 2);
+	CActionChangeImage * actChgImgIdle = new CActionChangeImage(this, 0);
 	seqFollowPlayer->AddChild(condSeeingPlayer);
 	seqFollowPlayer->AddChild(actChgImgFollowing);
 
 	m_rootBehaviour->AddChild(seqFollowPlayer);
+	m_rootBehaviour->AddChild(actChgImgIdle);
 }
 
 void Character::FillPath() {

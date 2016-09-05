@@ -9,7 +9,6 @@ public:
 protected:
 	virtual void OnEnter();
 	virtual EBehaviourStatus Update();
-	virtual void Reset() {}
 private:
 	uint16_t m_targetImageID;
 	EBehaviourStatus m_localStatus;

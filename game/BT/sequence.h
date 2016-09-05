@@ -8,7 +8,7 @@ class CSequence: public CGroup {
 public:
 	CSequence(Character * owner);
 
-	virtual void Reset();
+	virtual void Reset() override;
 protected:
 	virtual EBehaviourStatus Update() override;
 	virtual void OnEnter() override;

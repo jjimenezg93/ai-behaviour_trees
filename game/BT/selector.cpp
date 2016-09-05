@@ -11,12 +11,14 @@ EBehaviourStatus CSelector::Update() {
 		status = (*m_currentChild)->Tick();
 
 		if (status != EBS_FAIL) {
+			OnExit();
 			return status;
 		}
 
 		m_currentChild++;
 
 		if (m_currentChild == GetChildren().end()) {
+			OnExit();
 			return EBS_FAIL;
 		}
 	}
