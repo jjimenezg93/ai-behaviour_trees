@@ -15,7 +15,7 @@ void ArriveSteering::Init(Character * ch) {
 }
 
 void ArriveSteering::Update(Accelerations &acc, USVec2D target) {
-	if (GetCh()->CanMove()) {//added for SM's
+	if (GetCh()->CanMove()) {//added for SM/BT
 		Character * ch = GetCh();
 		USVec2D chLoc = ch->GetLoc();
 		USVec2D desiredVelocity = target - chLoc;

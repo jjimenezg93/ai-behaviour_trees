@@ -51,6 +51,8 @@ public:
 
 	bool CanMove() const { return mCanMove; }
 	void SetCanMove(bool value) { mCanMove = value; }
+
+	USVec2D GetTarget() const { return mTarget; }
 private:
 	void FillPath();
 

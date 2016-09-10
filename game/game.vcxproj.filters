@@ -48,6 +48,9 @@
     <ClCompile Include="BT\condition_seeingplayer.cpp">
       <Filter>BT\conditions</Filter>
     </ClCompile>
+    <ClCompile Include="BT\action_movetotarget.cpp">
+      <Filter>BT\actions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="character.h" />
@@ -93,6 +96,9 @@
     </ClInclude>
     <ClInclude Include="BT\condition_seeingplayer.h">
       <Filter>BT\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="BT\action_movetotarget.h">
+      <Filter>BT\actions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

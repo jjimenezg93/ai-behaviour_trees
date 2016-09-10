@@ -16,6 +16,7 @@
 #include "BT/selector.h"
 #include "BT/sequence.h"
 #include "BT/action_changeimage.h"
+#include "BT/action_movetotarget.h"
 #include "BT/condition_seeingplayer.h"
 
 #define INPUT_MIN_TIME 0.2f
@@ -56,11 +57,14 @@ void Character::OnStart() {
 	CConditionSeeingPlayer * condSeeingPlayer = new CConditionSeeingPlayer(this);
 	CActionChangeImage * actChgImgFollowing = new CActionChangeImage(this, 2);
 	CActionChangeImage * actChgImgIdle = new CActionChangeImage(this, 0);
+	CActionMoveToTarget * actMoveToTarget = new CActionMoveToTarget(this);
 	seqFollowPlayer->AddChild(condSeeingPlayer);
 	seqFollowPlayer->AddChild(actChgImgFollowing);
+	seqFollowPlayer->AddChild(actMoveToTarget);
+	seqFollowPlayer->AddChild(actChgImgIdle);
 
 	m_rootBehaviour->AddChild(seqFollowPlayer);
-	m_rootBehaviour->AddChild(actChgImgIdle);
+	//m_rootBehaviour->AddChild(actChgImgIdle);
 }
 
 void Character::FillPath() {

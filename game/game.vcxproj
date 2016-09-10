@@ -127,6 +127,7 @@
     <ClCompile Include="align_steering.cpp" />
     <ClCompile Include="arrive_steering.cpp" />
     <ClCompile Include="BT\action_changeimage.cpp" />
+    <ClCompile Include="BT\action_movetotarget.cpp" />
     <ClCompile Include="BT\behaviour.cpp" />
     <ClCompile Include="BT\condition_seeingplayer.cpp" />
     <ClCompile Include="BT\group.cpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="align_steering.h" />
     <ClInclude Include="arrive_steering.h" />
     <ClInclude Include="BT\action_changeimage.h" />
+    <ClInclude Include="BT\action_movetotarget.h" />
     <ClInclude Include="BT\behaviour.h" />
     <ClInclude Include="BT\condition_seeingplayer.h" />
     <ClInclude Include="BT\group.h" />
