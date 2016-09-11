@@ -11,6 +11,6 @@ void CActionChangeImage::OnEnter() {
 	m_localStatus = EBS_SUCCESS;
 }
 
-EBehaviourStatus CActionChangeImage::Update() {
+EBehaviourStatus CActionChangeImage::Update(float deltaTime) {
 	return m_localStatus;
 }

@@ -10,7 +10,7 @@ public:
 
 	virtual void Reset() override;
 protected:
-	virtual EBehaviourStatus Update() override;
+	virtual EBehaviourStatus Update(float deltaTime) override;
 	virtual void OnEnter() override;
 	virtual void OnExit() override;
 private:

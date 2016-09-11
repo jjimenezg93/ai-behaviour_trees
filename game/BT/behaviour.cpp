@@ -5,12 +5,12 @@
 
 CBehaviour::CBehaviour(Character * owner): m_owner(owner), m_status(EBS_INVALID) {}
 
-EBehaviourStatus CBehaviour::Tick() {
+EBehaviourStatus CBehaviour::Tick(float deltaTime) {
 	if (m_status == EBS_INVALID) {
 		OnEnter();
 	}
 
-	m_status = Update();
+	m_status = Update(deltaTime);
 
 	if (m_status != EBS_RUNNING) {
 		OnExit();
@@ -24,7 +24,7 @@ Character * CBehaviour::GetOwner() const {
 }
 
 //overriden if necessary, leads to OnExit() inside Tick() if not
-EBehaviourStatus CBehaviour::Update() {
+EBehaviourStatus CBehaviour::Update(float deltaTime) {
 	return EBehaviourStatus::EBS_SUCCESS;
 }
 

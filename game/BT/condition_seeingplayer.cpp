@@ -13,6 +13,6 @@ void CConditionSeeingPlayer::OnEnter() {
 		m_conditionResult = EBS_FAIL;
 }
 
-EBehaviourStatus CConditionSeeingPlayer::Update() {
+EBehaviourStatus CConditionSeeingPlayer::Update(float deltaTime) {
 	return m_conditionResult;
 }

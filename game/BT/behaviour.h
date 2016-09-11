@@ -14,14 +14,14 @@ class CBehaviour {
 public:
 	CBehaviour(Character * owner);
 
-	EBehaviourStatus Tick();
+	EBehaviourStatus Tick(float deltaTime);
 
 	//resets timers or similar variables, each time the behaviour is processed
 	virtual void Reset();
 protected:
 	Character * GetOwner() const;
 
-	virtual EBehaviourStatus Update();
+	virtual EBehaviourStatus Update(float deltaTime);
 	virtual void OnEnter();
 	virtual void OnExit();
 private:

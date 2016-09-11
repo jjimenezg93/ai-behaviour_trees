@@ -18,6 +18,7 @@
 #include "BT/action_changeimage.h"
 #include "BT/action_movetotarget.h"
 #include "BT/condition_seeingplayer.h"
+#include "BT/action_alarm.h"
 
 #define INPUT_MIN_TIME 0.2f
 
@@ -57,8 +58,12 @@ void Character::OnStart() {
 	CConditionSeeingPlayer * condSeeingPlayer = new CConditionSeeingPlayer(this);
 	CActionChangeImage * actChgImgFollowing = new CActionChangeImage(this, 2);
 	CActionChangeImage * actChgImgIdle = new CActionChangeImage(this, 0);
+	CActionChangeImage * actChgImgAlarm = new CActionChangeImage(this, 1);
 	CActionMoveToTarget * actMoveToTarget = new CActionMoveToTarget(this);
+	CActionAlarm * actAlarm = new CActionAlarm(this, 2.f);
 	seqFollowPlayer->AddChild(condSeeingPlayer);
+	seqFollowPlayer->AddChild(actChgImgAlarm);
+	seqFollowPlayer->AddChild(actAlarm);
 	seqFollowPlayer->AddChild(actChgImgFollowing);
 	seqFollowPlayer->AddChild(actMoveToTarget);
 	seqFollowPlayer->AddChild(actChgImgIdle);
@@ -86,7 +91,7 @@ void Character::OnStop() {
 void Character::OnUpdate(float step) {
 	mLastInputTime += step;
 
-	m_rootBehaviour->Tick();
+	m_rootBehaviour->Tick(step);
 
 	Accelerations acc;
 	for (std::vector<Steering *>::iterator itr = mSteerings.begin(); itr != mSteerings.end();

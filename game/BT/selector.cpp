@@ -5,10 +5,10 @@
 
 CSelector::CSelector(Character * owner): CGroup(owner) {}
 
-EBehaviourStatus CSelector::Update() {
+EBehaviourStatus CSelector::Update(float deltaTime) {
 	EBehaviourStatus status;
 	while (1) {
-		status = (*m_currentChild)->Tick();
+		status = (*m_currentChild)->Tick(deltaTime);
 
 		if (status != EBS_FAIL) {
 			OnExit();

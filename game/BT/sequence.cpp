@@ -5,10 +5,10 @@
 
 CSequence::CSequence(Character * owner): CGroup(owner) {}
 
-EBehaviourStatus CSequence::Update() {
+EBehaviourStatus CSequence::Update(float deltaTime) {
 	EBehaviourStatus status;
 	while (1) {
-		status = (*m_currentChild)->Tick();
+		status = (*m_currentChild)->Tick(deltaTime);
 
 		if (status != EBS_SUCCESS) {
 			OnExit();

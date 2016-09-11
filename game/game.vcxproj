@@ -126,6 +126,7 @@
     <ClCompile Include="aligntomovement_steering.cpp" />
     <ClCompile Include="align_steering.cpp" />
     <ClCompile Include="arrive_steering.cpp" />
+    <ClCompile Include="BT\action_alarm.cpp" />
     <ClCompile Include="BT\action_changeimage.cpp" />
     <ClCompile Include="BT\action_movetotarget.cpp" />
     <ClCompile Include="BT\behaviour.cpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="aligntomovement_steering.h" />
     <ClInclude Include="align_steering.h" />
     <ClInclude Include="arrive_steering.h" />
+    <ClInclude Include="BT\action_alarm.h" />
     <ClInclude Include="BT\action_changeimage.h" />
     <ClInclude Include="BT\action_movetotarget.h" />
     <ClInclude Include="BT\behaviour.h" />

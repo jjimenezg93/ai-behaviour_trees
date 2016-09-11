@@ -51,6 +51,9 @@
     <ClCompile Include="BT\action_movetotarget.cpp">
       <Filter>BT\actions</Filter>
     </ClCompile>
+    <ClCompile Include="BT\action_alarm.cpp">
+      <Filter>BT\actions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="character.h" />
@@ -98,6 +101,9 @@
       <Filter>BT\conditions</Filter>
     </ClInclude>
     <ClInclude Include="BT\action_movetotarget.h">
+      <Filter>BT\actions</Filter>
+    </ClInclude>
+    <ClInclude Include="BT\action_alarm.h">
       <Filter>BT\actions</Filter>
     </ClInclude>
   </ItemGroup>

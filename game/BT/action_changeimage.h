@@ -8,7 +8,7 @@ public:
 	CActionChangeImage(Character * owner, uint16_t imageID);
 protected:
 	virtual void OnEnter();
-	virtual EBehaviourStatus Update();
+	virtual EBehaviourStatus Update(float deltaTime);
 private:
 	uint16_t m_targetImageID;
 	EBehaviourStatus m_localStatus;

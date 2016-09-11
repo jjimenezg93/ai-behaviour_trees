@@ -8,7 +8,7 @@ public:
 	CConditionSeeingPlayer(Character * owner);
 protected:
 	virtual void OnEnter() override;
-	virtual EBehaviourStatus Update() override;
+	virtual EBehaviourStatus Update(float deltaTime) override;
 private:
 	EBehaviourStatus m_conditionResult;
 };

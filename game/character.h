@@ -52,6 +52,9 @@ public:
 	bool CanMove() const { return mCanMove; }
 	void SetCanMove(bool value) { mCanMove = value; }
 
+	bool IsMoving() const { return mIsMoving; }
+	void SetIsMoving(bool value) { mIsMoving = value; }
+
 	USVec2D GetTarget() const { return mTarget; }
 private:
 	void FillPath();
@@ -68,6 +71,8 @@ private:
 
 	bool mIsTargetActive;
 	bool mCanMove;
+
+	bool mIsMoving;
 
 	float mLastInputTime;
 
